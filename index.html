@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("file:///C:/Users/lais0/OneDrive/Área%20de%20Trabalho/lele/Sem%20Título-1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+  }
+
+  .container {
+    max-width: 170px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .sidebar img {
+    width: 450px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .sidebar img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .buttons button {
+    border: none;
+    background: transparent;
+  }
+
+  .buttons button img {
+    width: 450px;
+    height: 100px;
+  }
+
+</style>
+<title>Site Responsivo</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="file:///C:/Users/lais0/OneDrive/Área%20de%20Trabalho/lele/mandala02.png" alt="Logo do Site" class="logo" style="margin-top: 190px;">
+    </header>
+    <main>
+      <div class="sidebar">
+        <img src="file:///C:/Users/lais0/OneDrive/Área%20de%20Trabalho/lele/IMG_8795.png" alt="Imagem na Lateral Direita">
+      </div>
+      <div class="buttons">
+        <button id="button1" onclick="copiarNumero()">
+          <img src="file:///C:/Users/lais0/OneDrive/Área%20de%20Trabalho/lele/botao01.png" alt="Botão 1">
+        </button>
+        <button id="button2" onclick="window.location.href='https://api.whatsapp.com/send/?phone=5511940295880&text&type=phone_number&app_absent=0'">
+          <img src="file:///C:/Users/lais0/OneDrive/Área%20de%20Trabalho/lele/botao02.png" alt="Botão 2">
+        </button>
+        <button id="button3" onclick="window.location.href='https://www.whatsapp.com/catalog/5511940295880/?app_absent=0'">
+          <img src="file:///C:/Users/lais0/OneDrive/Área%20de%20Trabalho/lele/botao3.png" alt="Botão 3">
+        </button>
+        <button id="button4" onclick="window.location.href='https://www.instagram.com/ciapratica/?igshid=MjEwN2IyYWYwYw%3D%3D'">
+          <img src="file:///C:/Users/lais0/OneDrive/Área%20de%20Trabalho/lele/botao4.png" alt="Botão 4">
+        </button>
+        <button id="button5" onclick="window.location.href='https://www.facebook.com/ciapratica?mibextid=ZbWKwL'">
+          <img src="file:///C:/Users/lais0/OneDrive/Área%20de%20Trabalho/lele/botao5.png" alt="Botão 5">
+        </button>
+        <button id="button6" onclick="window.location.href='https://www.instagram.com/lenitacruzprofessoraeterapeuta/?igshid=MjEwN2IyYWYwYw%3D%3D'">
+          <img src="file:///C:/Users/lais0/OneDrive/Área%20de%20Trabalho/lele/botao06.png" alt="Botão 6">
+        </button>
+      </div>
+    </main>
+  </div>
+  <footer>
+    <p style="color: #faf2f2;">&copy; 2023 Lenita Cruz. Todos os direitos reservados.</p>
+  </footer>
+  <script>
+    function copiarNumero() {
+      const numero = '490.826.631-04';
+      const input = document.createElement('input');
+      input.style.position = 'absolute';
+      input.style.left = '-9999px';
+      input.value = numero;
+      document.body.appendChild(input);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+      alert(`Número copiado: ${numero}`);
+    }
+  </script>
+</body>
+</html>
