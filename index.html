@@ -123,10 +123,21 @@
     </main>
   </div>
   <footer>
-    <p>&copy; 2023 Lenita Cruz. Todos os direitos reservados.</p>
+     <p style="color: #faf2f2;">&copy; 2023 Lenita Cruz. Todos os direitos reservados.</p>
   </footer>
   <script>
-    // O código JavaScript permanece inalterado
+    function copiarNumero() {
+      const numero = '490.826.631-04';
+      const input = document.createElement('input');
+      input.style.position = 'absolute';
+      input.style.left = '-9999px';
+      input.value = numero;
+      document.body.appendChild(input);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+      alert(`Número copiado: ${numero}`);
+    }
   </script>
 </body>
 </html>
